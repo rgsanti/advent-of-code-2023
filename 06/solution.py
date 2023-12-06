@@ -12,8 +12,8 @@ def get_values(string):
     return values
 
 def get_times_and_distances(lines):
-    times = get_values(LINES[0])
-    distances = get_values(LINES[1])
+    times = get_values(lines[0])
+    distances = get_values(lines[1])
     return times, distances
 
 def calculate_num_ways(time, distance):
@@ -36,7 +36,7 @@ def part_one():
         num_ways = calculate_num_ways(time, distance)
         num_ways_array.append(num_ways)
     answer = calculate_array_product(num_ways_array)
-    print(f'Answer to Part One: {answer}')
+    print(f'Part One: {answer}')
 
 part_one()
 
@@ -51,8 +51,8 @@ def get_value(string):
     return value
 
 def get_time_and_distance(lines):
-    time = get_value(LINES[0])
-    distance = get_value(LINES[1])
+    time = get_value(lines[0])
+    distance = get_value(lines[1])
     return time, distance
 
 def get_min_charge_time(time, distance):
@@ -70,6 +70,6 @@ def part_two():
     minimum = get_min_charge_time(time, distance)
     maximum = get_max_charge_time(time, distance)
     answer = 1 + maximum - minimum
-    print(f'Answer to Part Two: {answer}')
+    print(f'Part Two: {answer}')
 
 part_two()
