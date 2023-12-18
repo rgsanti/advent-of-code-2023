@@ -13,7 +13,7 @@ def get_edge_digits(string):
             first_digit = (i, c)
             break
 
-    last_digit = None
+    # last_digit = None
     for (i, c) in enumerate(string):
         if (c.isdigit()):
             if last_digit == None or i > last_digit[0]:
